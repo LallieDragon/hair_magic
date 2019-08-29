@@ -5,6 +5,7 @@ import './App.css';
 
 import Routes from './Routes';
 import NavbarContainer from './containers/NavbarContainer';
+// import FooterContainer from './containers/FooterContainer';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <MDBContainer>
         <Routes />
       </MDBContainer>
+
     </Router>
   );
 }

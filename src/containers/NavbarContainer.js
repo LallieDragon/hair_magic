@@ -40,27 +40,24 @@ class NavbarContainer extends React.Component {
 
       let content = this.state.navbarContent.links.map((link) =>
         <MDBNavItem key={link}>
-          <MDBNavLink className="nav-links" id={link} to={ `#${link}` }>{link}</MDBNavLink>
+          <MDBNavLink style={{ color: "#E15BDD" }}className="nav-links" id={link} to={ `${link}` }>{link}</MDBNavLink>
         </MDBNavItem>
       )
 
       return(
-        <MDBNavbar color="elegant-color-dark" dark expand="md" style={{ height: '300px' }}>
+        <MDBNavbar color="elegant-color-dark" dark expand="md" style={{ height: '150px', width: "100%" }}>
           <MDBNavbarBrand>
-            <img alt="logo" href="/" src={ logo } style={{ height: '100px'}}/>
+            <img alt="logo" href="/Contact" src={ logo } style={{ height: '100px'}}/>
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
 
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav left>
+            <MDBNavbarNav right>
               {content}
             </MDBNavbarNav>
           </MDBCollapse>
         </MDBNavbar>
       )
-
-
-
     }
   }
 }
