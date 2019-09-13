@@ -9,6 +9,7 @@ import ServicesContainer from './containers/ServicesContainer';
 export default () =>
   <Switch>
     <Route path="/" exact component={AboutContainer} />
+    <Route path="/About" exact component={AboutContainer} />
     <Route path="/Policies" exact component={PoliciesContainer} />
     <Route path="/Services" exact component={ServicesContainer} />
     <Route component={NotFound} />

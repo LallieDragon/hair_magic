@@ -1,24 +1,30 @@
 import React from 'react';
-import { MDBContainer } from 'mdbreact';
+import { MDBContainer, MDBMedia } from 'mdbreact';
+
+import imageQuality from '../imageHandling';
 
 const InfoSection = (props) => {
-  if (props.content.additional !== null) {
+  if (props.content.photo !== null) {
     return (
-      <MDBContainer className="text-center">
-        <h3>{props.content.title}</h3>
-        <p>{ props.content.body}</p>
-        <br />
-        <p>{ props.content.additionalInfo }</p>
-      </MDBContainer>
-    )
-  } else {
-    return(
-      <MDBContainer className="text-center">
-        <h3>{props.content.title}</h3>
-        <p>{ props.content.body}</p>
-      </MDBContainer>
-    )
+      <MDBMedia>
+        <MDBMedia left className="mr-3" href="#">
+          <MDBMedia object src={imageQuality(props.content.photo.fields.file.url, 20)} alt="" />
+        </MDBMedia>
+        <MDBMedia body>
+          <MDBMedia heading>{props.content.title}</MDBMedia>
+          {props.content.body}
+        </MDBMedia>
+      </MDBMedia>
+    );
   }
+  
+  return(
+    <MDBContainer className="text-center">
+      <h3>{props.content.title}</h3>
+      <p>{ props.content.body}</p>
+    </MDBContainer>
+  )
+
 }
 
 export default InfoSection;
