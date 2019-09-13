@@ -1,8 +1,9 @@
 import React from 'react';
 import { initClient } from '../contentfulClient';
 import { MDBContainer, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse } from "mdbreact";
-
+import { tabs } from '../contentful/Keys.json';
 import logo from '../files/logo.png';
+import '../styles/navbar.css';
 
 class NavbarContainer extends React.Component {
   constructor(props) {
@@ -11,7 +12,7 @@ class NavbarContainer extends React.Component {
       navbarContent: null,
       isOpen: false
     }
-    this.getNavbarContent = this.getNavbarContent.bind(this);
+    this.getContent = this.getContent.bind(this);
     this.toggleCollapse = this.toggleCollapse.bind(this);
   }
 
@@ -21,10 +22,10 @@ class NavbarContainer extends React.Component {
     this.setState({ isOpen: !currentlyOpen });
   }
 
-  getNavbarContent = () => {
+  getContent = (key) => {
     let client = initClient()
 
-    client.getEntry('qi8y0CEKgmOUbusm7Bqid')
+    client.getEntry(key)
     .then((entry) => this.setState({
       navbarContent: entry.fields
      }))
@@ -33,22 +34,25 @@ class NavbarContainer extends React.Component {
 
   render() {
     if (this.state.navbarContent === null) {
-      this.getNavbarContent();
+      this.getContent(tabs);
       return <div>Loading</div>
     } else {
       console.log(this.state)
 
-      let content = this.state.navbarContent.links.map((link) =>
+      let links = this.state.navbarContent.tabs;
+
+      let content = links.map((link) =>
         <MDBNavItem key={link}>
-          <MDBNavLink style={{ color: "#E15BDD" }}className="nav-links" id={link} to={ `${link}` }>{link}</MDBNavLink>
+          <MDBNavLink className="nav-links" id={link} to={ `${link}` }>{link}</MDBNavLink>
         </MDBNavItem>
       )
 
       return(
         <MDBNavbar color="elegant-color-dark" dark expand="md" style={{ height: '150px', width: "100%" }}>
           <MDBNavbarBrand>
-            <img alt="logo" href="/Contact" src={ logo } style={{ height: '100px'}}/>
+            <img alt="logo" href="/" src={ logo } style={{ height: '100px'}}/>
           </MDBNavbarBrand>
+
           <MDBNavbarToggler onClick={this.toggleCollapse} />
 
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>

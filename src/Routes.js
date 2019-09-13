@@ -4,12 +4,12 @@ import { Route, Switch } from "react-router-dom";
 import NotFound from './components/NotFound';
 import AboutContainer from './containers/AboutContainer';
 import PoliciesContainer from './containers/PoliciesContainer';
+import ServicesContainer from './containers/ServicesContainer';
 
-// <Route path="/" exact component={HomeContainer} />
-// <Route path="/contact" exact component={Contact} />
 export default () =>
   <Switch>
-    <Route path="/About%20Ashley" component={AboutContainer} />
+    <Route path="/" exact component={AboutContainer} />
     <Route path="/Policies" exact component={PoliciesContainer} />
+    <Route path="/Services" exact component={ServicesContainer} />
     <Route component={NotFound} />
   </Switch>;

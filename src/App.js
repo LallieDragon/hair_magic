@@ -9,13 +9,9 @@ import NavbarContainer from './containers/NavbarContainer';
 
 const App = () => {
   return (
-    <Router>
-      <MDBContainer>
-        <NavbarContainer />
-      </MDBContainer>
-      <MDBContainer>
-        <Routes />
-      </MDBContainer>
+    <Router className="router">
+      <NavbarContainer />
+      <Routes />
 
     </Router>
   );

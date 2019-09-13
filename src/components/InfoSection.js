@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBContainer } from 'mdbreact';
 
 const InfoSection = (props) => {
-  if (props.content.additionalInfo !== undefined) {
+  if (props.content.additional !== null) {
     return (
       <MDBContainer className="text-center">
         <h3>{props.content.title}</h3>

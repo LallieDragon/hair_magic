@@ -2,36 +2,39 @@ import React from 'react';
 import { MDBContainer } from 'mdbreact';
 import { initClient } from '../contentfulClient';
 
+import { about } from '../contentful/Keys.json'
+
 import InfoSection from '../components/InfoSection';
 
 class AboutContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      aboutContent: null
+      content: null
     }
-    this.getAboutContent = this.getAboutContent.bind(this);
+    this.getContent = this.getContent.bind(this);
   }
 
-  getAboutContent = () => {
+  getContent = (navKey) => {
     let client = initClient()
 
-    client.getEntry('14r9bMB6zAnCRIEhzhu0rB')
+    client.getEntry(navKey)
     .then((entry) => this.setState({
-      aboutContent: entry.fields
+      content: entry.fields
      }))
     .catch('Error: ' + console.error)
   }
 
   render() {
-    if (this.state.aboutContent === null) {
-      this.getAboutContent();
+    if (this.state.content === null) {
+      this.getContent(about);
       return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
     }
 
+    console.log(this.state)
     return(
       <MDBContainer>
-        <InfoSection content={this.state.aboutContent} />
+        <InfoSection content={this.state.content} />
       </MDBContainer>
     )
   }
