@@ -5,7 +5,8 @@ import imageQuality from '../imageHandling';
 import '../styles/InfoSection.css';
 
 const InfoSection = (props) => {
-  if (props.content.photo !== null) {
+  console.log(props.content)
+  if (props.content.photo !== undefined) {
     return (
       <MDBMedia>
         <MDBMedia left className="mr-3" href="#">
@@ -14,6 +15,7 @@ const InfoSection = (props) => {
         <MDBMedia body>
           <MDBMedia heading>{props.content.title}</MDBMedia>
           <p id="text">{props.content.body}</p>
+          <p id="text">{props.content.additional || ""}</p>
         </MDBMedia>
       </MDBMedia>
     );
@@ -23,6 +25,7 @@ const InfoSection = (props) => {
     <MDBContainer className="text-center">
       <h3>{props.content.title}</h3>
       <p>{ props.content.body}</p>
+      <p>{props.content.additional || ""}</p>
     </MDBContainer>
   )
 
