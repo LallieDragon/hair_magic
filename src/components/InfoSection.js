@@ -2,6 +2,7 @@ import React from 'react';
 import { MDBContainer, MDBMedia } from 'mdbreact';
 
 import imageQuality from '../imageHandling';
+import '../styles/InfoSection.css';
 
 const InfoSection = (props) => {
   if (props.content.photo !== null) {
@@ -12,12 +13,12 @@ const InfoSection = (props) => {
         </MDBMedia>
         <MDBMedia body>
           <MDBMedia heading>{props.content.title}</MDBMedia>
-          {props.content.body}
+          <p id="text">{props.content.body}</p>
         </MDBMedia>
       </MDBMedia>
     );
   }
-  
+
   return(
     <MDBContainer className="text-center">
       <h3>{props.content.title}</h3>

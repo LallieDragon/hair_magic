@@ -4,7 +4,9 @@ import { initClient } from '../contentfulClient';
 
 import InfoSection from '../components/InfoSection';
 import PriceList from '../components/PriceList';
-import { cuts, color, additional, treatments, disclaimer } from '../contentful/Keys';
+import { cuts, color, additionalTreatments, treatments, disclaimer } from '../contentful/Keys';
+
+const client = initClient()
 
 class ServicesContainer extends React.Component {
   constructor(props) {
@@ -24,8 +26,6 @@ class ServicesContainer extends React.Component {
   }
 
   getCutsContent = (key) => {
-    let client = initClient()
-
     client.getEntry(key)
     .then((entry) => this.setState({
       cutsContent: entry.fields
@@ -34,8 +34,6 @@ class ServicesContainer extends React.Component {
   }
 
   getColorContent = (key) => {
-    let client = initClient()
-
     client.getEntry(key)
     .then((entry) => this.setState({
       colorContent: entry.fields
@@ -44,8 +42,6 @@ class ServicesContainer extends React.Component {
   }
 
   getTreatmentsContent = (key) => {
-    let client = initClient()
-
     client.getEntry(key)
     .then((entry) => this.setState({
       treatmentsContent: entry.fields
@@ -54,8 +50,6 @@ class ServicesContainer extends React.Component {
   }
 
   getDisclaimerContent = (key) => {
-    let client = initClient()
-
     client.getEntry(key)
     .then((entry) => this.setState({
       disclaimerContent: entry.fields
@@ -64,8 +58,6 @@ class ServicesContainer extends React.Component {
   }
 
   getAdditionalContent = (key) => {
-    let client = initClient()
-
     client.getEntry(key)
     .then((entry) => this.setState({
       additionalContent: entry.fields
@@ -84,7 +76,7 @@ class ServicesContainer extends React.Component {
       this.getTreatmentsContent(treatments);
       return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
     } else if (this.state.additionalContent === null) {
-      this.getAdditionalContent();
+      this.getAdditionalContent(additionalTreatments);
       return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
     } else if (this.state.disclaimerContent === null) {
       this.getDisclaimerContent(disclaimer);

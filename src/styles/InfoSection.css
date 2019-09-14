@@ -1,0 +1,13 @@
+.media-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.mt-0 {
+  text-align: left;
+}
+
+#text {
+  text-align: left;
+}
