@@ -1,49 +1,53 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import Lightbox from "react-image-lightbox";
+import { initClient } from '../contentfulClient';
 
-import { media } from '../contentful/Keys';
+import imageQuality from '../imageHandling';
+import { portfolio } from '../contentful/Keys';
 import "../styles/Portfolio.css";
+
+const client = initClient()
 
 class PortfolioContainer extends React.Component {
 state = {
   photoIndex: 0,
   isOpen: false,
-  images: [
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(145).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(150).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(152).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(42).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(151).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(40).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(148).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(147).jpg',
-    'https://mdbootstrap.com/img/Photos/Lightbox/Original/img%20(149).jpg'
-  ]
+  images: null
 }
 
 getMedia = (key) => {
-  console.log("get media")
+  client.getEntry(key)
+  .then((entry) => this.setState({
+    images: entry.fields.portfolio
+   }))
+  .catch('Error: ' + this.state + console.error)
 }
 
 renderImages = () => {
   let photoIndex = -1;
-  const { images } = this.state;
 
-return images.map(imageSrc => {
-  photoIndex++;
-  const privateKey = photoIndex;
-  return (
-    <MDBCol md="4" key={photoIndex}>
-      <figure>
-        <img src={imageSrc} alt="Gallery" className="img-fluid" onClick={()=>
-        this.setState({ photoIndex: privateKey, isOpen: true })
-        }
-        />
-      </figure>
-    </MDBCol>
-    );
-  })
+  if (this.state.images !== null && this.state.images !== undefined) {
+    console.log(this.state.images)
+
+    return this.state.images.map(imageSrc => {
+      photoIndex++;
+      const privateKey = photoIndex;
+      return (
+        <MDBCol md="4" key={photoIndex}>
+          <figure>
+            <img src={imageQuality(imageSrc.fields.file.url, 20)} alt="Gallery" className="img-fluid" onClick={()=>
+            this.setState({ photoIndex: privateKey, isOpen: true })
+            }
+            />
+          </figure>
+        </MDBCol>
+        );
+      }
+    )
+  } else {
+    this.getMedia(portfolio)
+  }
 }
 
 render() {
