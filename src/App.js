@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { MDBContainer } from 'mdbreact';
+// import { MDBContainer } from 'mdbreact';
 import './App.css';
 
 import Routes from './Routes';

@@ -1,8 +1,9 @@
 import React from 'react';
 import { initClient } from '../contentfulClient';
-import { MDBContainer, MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse } from "mdbreact";
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse } from "mdbreact";
 import { tabs } from '../contentful/Keys.json';
 import logo from '../files/logo.png';
+
 import '../styles/navbar.css';
 
 class NavbarContainer extends React.Component {
@@ -48,7 +49,7 @@ class NavbarContainer extends React.Component {
       )
 
       return(
-        <MDBNavbar color="elegant-color-dark" dark expand="md" style={{ height: '150px', width: "100%" }}>
+        <MDBNavbar  id="nav-bar" color="elegant-color-dark" dark expand="md" style={{ height: '150px', width: "100%" }}>
           <MDBNavbarBrand>
             <img alt="logo" href="/" src={ logo } style={{ height: '100px'}}/>
           </MDBNavbarBrand>

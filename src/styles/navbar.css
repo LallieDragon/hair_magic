@@ -1,6 +1,13 @@
+#nav-bar {
+  margin-bottom: 3rem;
+}
+
 .nav-links {
   font-size: 2rem;
-  color: #E15BDD;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-item .nav-link {
+  color: #A3F3EB
 }
 
 .ml-auto {
