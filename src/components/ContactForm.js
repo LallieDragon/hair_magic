@@ -10,8 +10,17 @@ class FormPage extends React.Component {
       subject: '',
       message: ''
     }
+    this.handleChange = this.handleChange.bind(this);
   }
+
+  handleChange = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+
   render () {
+    console.log(this.state)
     return (
       <MDBContainer>
         <MDBRow>
@@ -19,22 +28,22 @@ class FormPage extends React.Component {
             <form id="contact-form">
               <p className="h4 text-center mb-4">Write us to book an appointment</p>
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" className="form-control" />
+              <input type="text" name="name" className="form-control" onChange={this.handleChange} />
 
               <br />
 
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" className="form-control" />
+              <input type="email" name="email" className="form-control" onChange={this.handleChange} />
 
               <br />
 
               <label htmlFor="subject">Subject</label>
-              <input type="text" name="subject" className="form-control" />
+              <input type="text" name="subject" className="form-control" onChange={this.handleChange} />
 
               <br />
 
               <label htmlFor="message">Message</label>
-              <textarea type="text" message="message" className="form-control" rows="3" />
+              <textarea type="text" message="message" className="form-control" rows="3" onChange={this.handleChange} />
 
               <div className="text-center mt-4">
                 <MDBBtn color="info-color-dark" outline type="submit" value="Send">

@@ -17,7 +17,7 @@ const PriceList = (props) => {
   return (
     <MDBContainer>
       <MDBRow md="12" className="title">
-        <h2>{props.content.title}</h2>
+        <p className="h2 text-left mb-4" style={{ textDecoration: "underline" }}>{props.content.title}</p>
       </MDBRow>
       <MDBContainer className="pricing-container">
         {content}

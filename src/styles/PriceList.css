@@ -1,9 +1,8 @@
 .title {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .pricing-container {
@@ -13,9 +12,9 @@
 .info {
   font-size: 1.5rem;
   text-align: left;
+  padding: none;
 }
 
 .pricing {
   display: flex;
-  justify-content: space-around;
 }
