@@ -25,4 +25,7 @@
   .pricing {
     margin-top: 1rem;
   }
+  .media-column {
+    align-items: center;
+  }
 }
