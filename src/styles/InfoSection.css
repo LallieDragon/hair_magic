@@ -12,3 +12,31 @@
 .text {
   text-align: left;
 }
+
+@media only screen and (max-width: 600px) {
+  .media-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mt-0 {
+    text-align: center;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .media-object {
+    width: 300px;
+    text-align: center;
+  }
+
+  .mr-3 {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+  }
+
+}

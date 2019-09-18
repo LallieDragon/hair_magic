@@ -14,6 +14,7 @@ const PriceList = (props) => {
     </MDBRow>
     )
   }
+
   return (
     <MDBContainer>
       <MDBRow md="12" className="title">

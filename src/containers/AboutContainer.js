@@ -33,9 +33,9 @@ class AboutContainer extends React.Component {
 
     console.log(this.state)
     return(
-      <MDBContainer style={{ position: "center", marginTop: "3rem"}}>
+      <div style={{ position: "center", marginTop: "3rem"}}>
         <InfoSection content={this.state.content} />
-      </MDBContainer>
+      </div>
     )
   }
 }

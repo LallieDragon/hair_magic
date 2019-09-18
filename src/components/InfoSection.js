@@ -8,8 +8,8 @@ const InfoSection = (props) => {
   console.log(props.content)
   if (props.content.photo !== undefined) {
     return (
-      <MDBMedia>
-        <MDBMedia left className="mr-3" href="#">
+      <MDBMedia className="media-column">
+        <MDBMedia className="mr-3 picture">
           <MDBMedia object src={imageQuality(props.content.photo.fields.file.url, 20)} alt="store-front" />
         </MDBMedia>
         <MDBMedia body>
@@ -23,7 +23,7 @@ const InfoSection = (props) => {
 
   return(
     <MDBContainer className="text-center">
-      <h3 style={{marginTop: "2rem"}}>{props.content.title}</h3>
+      <p className="h3" style={{marginTop: "2rem"}}>{props.content.title}</p>
       <p>{ props.content.body}</p>
       <p>{props.content.additional || ""}</p>
     </MDBContainer>

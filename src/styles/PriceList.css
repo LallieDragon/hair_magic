@@ -5,10 +5,6 @@
   margin-left: 2rem;
 }
 
-.pricing-container {
-
-}
-
 .info {
   font-size: 1.5rem;
   text-align: left;
@@ -18,4 +14,15 @@
 
 .pricing {
   display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .pricing {
+    margin-top: 1rem;
+  }
 }
