@@ -1,8 +1,11 @@
+@import url('./Raph-Lanok-Typeface/Raph-Lanok-Future/RaphLanokFuture/stylesheet.css');
+
 #nav-bar {
   margin-bottom: 3rem;
 }
 
 .nav-links {
+  font-family: 'raph_lanok_futureregular';
   font-size: 2rem;
 }
 

@@ -51,7 +51,7 @@ class NavbarContainer extends React.Component {
       return(
         <MDBNavbar  id="nav-bar" color="elegant-color-dark" dark expand="md" style={{ height: '150px', width: "100%" }}>
           <MDBNavbarBrand>
-            <img alt="logo" href="/" src={ logo } style={{ height: '100px'}}/>
+            <img alt="logo" href="/" src={ logo } style={{ height: '150px'}}/>
           </MDBNavbarBrand>
 
           <MDBNavbarToggler onClick={this.toggleCollapse} />

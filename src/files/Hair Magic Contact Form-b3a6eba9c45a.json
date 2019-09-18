@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hair-magic-contact-form",
+  "private_key_id": "b3a6eba9c45a86eab9b430af2dd6f5c8b5a48c3b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC8xshVgNR/QVXq\noFC6FOgnpcMe6BMWPnpdP48UQ0JwpkzbW1a/0daY3J0UyPzlKOnJib+4PBijx4kB\nTm/Pii8yaK8YhB45oZhQ9eiPF9Ojxm+SFapXxVE54r7Uavt3zMcHZQlXOVgijozs\ngr4pY5vSDLYWqi7/wBQe0MrCT/PAacQlmfJcrTXQfvu++e+IPEszJ1VgJLs9DHY+\n2am+cNSnzOVabTwrX/6nMKvB8AaG1IT0X4VXVeiRUQzMDPx1Ubb27mG8SOiMmjAf\npxACp65a5+8aFzyHGwIHrN0CSOnpppZGVdo73HBH7DECYuPIV63grGI6tpTXuuoE\nwI6MmhifAgMBAAECggEAEEDDHc12PjCXX5iG6saDCGrWplIP1qHxchbXUETMMxu2\nUUqHaQN9iPKxmYkGcQp5Om9gMNIHww4aZyDkMoewsZPew2sYmRinHw1VBQDlqVub\n3oV8AYuNB0FU8b/2P6XDWwkhaT+YLX19d514FuMrFsYeZUwouL9GXDLYyisNDvtG\nTrytCSUJ893n4/rPH0MYV6aMBRsTw+d5x0phOhKcpE+/MZZh1S7Gn/Fod4Ri4I69\nIBc/q430ZmBA7F7o5Ks+rtwfqJCkTSwPTyVukzeYAPcE7+HbbdsbZX7MttVuNPNX\nlWfJwhdfrf8MMRlDRM4mJtuGeFIn/4MFgp8W/Vr+WQKBgQDni4AxpuL5l1hcQGCF\nTDMBUV+bVq44Eeqj4y9vfcxxH6YZblx/1eW4LL3vVdzZxq3WbqdbW/haPRy3nReO\nj1v/5f+K2ynzjVGifzrAQbKTX3W/TVA0Pkct3tnAyLKckGce96oKzrsSdqb6PHec\nnmGUv6nQtdrFxs8EUr4xR3k7BwKBgQDQtulJCETpRL/TYVlqgOXlMeLIOxfgYcTw\n7OMTSCh/EyuPZ/eghOgxWUIxusaYWRaFj52iJzW5JKZVeQKTGRuyTCwWhl4MzVwt\nNMWcvWNjxpD5hOu499cm6N3mF7Bu81Jzqp6Cao+aajmRamjvpGVY5WiXMnvWP+az\njhgo2PeXqQKBgQCETioKNRotFFXhIMgGYuwiLKU81eLnFxXEX+STCIbxfOwkS/N+\n+HIzMx20zJNNvUFH7iKjCYJ3zcPDB3iWdURUjM/gQCtQh8fF2n1vrhqkKz/U+BCE\nSbHSfCxhBE1LORgzkcEQO+CZRENVaYfPbpDDtmEKaV+A84EHL2COOBEFsQKBgDX2\n5TCV68NonDSaWhU4iLiPAnUFGnJQtSwaA8hrgtUAbuXgWt1tH+AKlRvokAq6FiGo\ndXiErNZXDI7TAABqoIekPE4CpfSncGrb1zBko3sbz0ZEwPINWtrboOwqOdsmHK59\ncgiEZublCkd3/PPhTLcEcduOGQjXct4AIm0FVFcpAoGBAMw6EqhFT1z+Huk3q/Bn\nO4T8DdeHGe86q+X5ixv80VfI0JxfN1f/H0qyT2+awRNq4TItNG9S/D2cUKCh0kjg\nQrmvxgV350o2ZhjOzrvHj3sk8eFoApPMjOrbVnq7pI8Ar2OQcD8Z/ZsH3AY4ljHk\nfM2QPPpL7YGadkKXhHF1q9Pk\n-----END PRIVATE KEY-----\n",
+  "client_email": "hair-magic@hair-magic-contact-form.iam.gserviceaccount.com",
+  "client_id": "114875469036998496085",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hair-magic%40hair-magic-contact-form.iam.gserviceaccount.com"
+}
