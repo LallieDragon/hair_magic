@@ -88,7 +88,7 @@ class ServicesContainer extends React.Component {
           <PriceList content={this.state.colorContent} />
           <PriceList content={this.state.treatmentsContent} />
           <PriceList content={this.state.additionalContent} />
-          <InfoSection content={this.state.additionalContent} />
+          <InfoSection content={this.state.disclaimerContent} />
         </MDBContainer>
       )
     }

@@ -13,9 +13,9 @@ const InfoSection = (props) => {
           <MDBMedia object src={imageQuality(props.content.photo.fields.file.url, 20)} alt="" />
         </MDBMedia>
         <MDBMedia body>
-          <MDBMedia heading>{props.content.title}</MDBMedia>
-          <p id="text">{props.content.body}</p>
-          <p id="text">{props.content.additional || ""}</p>
+          <MDBMedia heading className="content-title">{props.content.title}</MDBMedia>
+          <p className="text">{props.content.body}</p>
+          <p className="text">{props.content.additional || ""}</p>
         </MDBMedia>
       </MDBMedia>
     );
@@ -23,7 +23,7 @@ const InfoSection = (props) => {
 
   return(
     <MDBContainer className="text-center">
-      <h3>{props.content.title}</h3>
+      <h3 style={{marginTop: "2rem"}}>{props.content.title}</h3>
       <p>{ props.content.body}</p>
       <p>{props.content.additional || ""}</p>
     </MDBContainer>

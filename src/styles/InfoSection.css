@@ -6,8 +6,9 @@
 
 .mt-0 {
   text-align: left;
+  margin: none;
 }
 
-#text {
+.text {
   text-align: left;
 }

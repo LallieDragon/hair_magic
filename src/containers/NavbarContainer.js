@@ -38,8 +38,6 @@ class NavbarContainer extends React.Component {
       this.getContent(tabs);
       return <div>Loading</div>
     } else {
-      console.log(this.state)
-
       let links = this.state.navbarContent.tabs;
 
       let content = links.map((link) =>
