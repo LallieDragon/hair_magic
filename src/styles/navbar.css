@@ -19,5 +19,6 @@
 }
 
 #navbarCollapse3 {
-  background-color: #222
+  background-color: #222;
+  z-index: 5;
 }
