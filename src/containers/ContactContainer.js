@@ -47,13 +47,12 @@ class ContactContainer extends React.Component {
       return <div>Loading</div>
     }
 
+    // <MDBCol md="6">
+    //   <ContactForm />
+    // </MDBCol>
     return(
       <MDBRow className="contact-container">
-        <MDBCol md="6">
-          <ContactForm />
-        </MDBCol>
-
-        <MDBCol md="6">
+        <MDBCol md="12">
           <SocialMedia content={this.state.socialContent.links}/>
         </MDBCol>
       </MDBRow>
