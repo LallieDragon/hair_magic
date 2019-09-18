@@ -46,7 +46,7 @@ class FormPage extends React.Component {
               <textarea type="text" message="message" className="form-control" rows="3" onChange={this.handleChange} />
 
               <div className="text-center mt-4">
-                <MDBBtn color="info-color-dark" outline type="submit" value="Send">
+                <MDBBtn style={{ marginBottom: "2rem" }} color="cyan lighten-3" outline type="submit" value="Send">
                   Send
                   <MDBIcon far icon="paper-plane" className="ml-2" />
                 </MDBBtn>

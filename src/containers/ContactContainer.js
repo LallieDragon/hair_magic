@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBCol, MDBRow } from 'mdbreact';
 import { initClient } from '../contentfulClient';
 
-import { social } from '../contentful/Keys';
+import { social, location } from '../contentful/Keys';
 
 import ContactForm from '../components/ContactForm';
 import SocialMedia from '../components/SocialMedia';
@@ -11,10 +11,12 @@ class ContactContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      socialContent: null
+      socialContent: null,
+      locationContent: null
     }
 
     this.getSocialContent = this.getSocialContent.bind(this);
+    this.getLocationContent = this.getLocationContent.bind(this);
   }
 
   getSocialContent = (key) => {
@@ -26,9 +28,22 @@ class ContactContainer extends React.Component {
      }))
     .catch('Error: ' + console.error)
   }
+
+  getLocationContent = (key) => {
+    let client = initClient()
+
+    client.getEntry(key)
+    .then((entry) => this.setState({
+      locationContent: entry.fields
+     }))
+    .catch('Error: ' + console.error)
+  }
   render() {
     if (this.state.socialContent === null) {
       this.getSocialContent(social)
+      return <div>Loading</div>
+    } else if (this.state.locationContent === null){
+      this.getLocationContent(location)
       return <div>Loading</div>
     }
 
