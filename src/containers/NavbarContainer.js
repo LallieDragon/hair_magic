@@ -4,7 +4,7 @@ import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNav
 import { tabs } from '../contentful/Keys.json';
 import logo from '../files/logo.png';
 import Spinner from '../components/Spinner';
-import '../styles/Navbar.css';
+import '../styles/navbar.css';
 
 class NavbarContainer extends React.Component {
   constructor(props) {
