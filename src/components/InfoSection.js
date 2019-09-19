@@ -5,7 +5,7 @@ import imageQuality from '../imageHandling';
 import '../styles/InfoSection.css';
 
 const InfoSection = (props) => {
-  console.log(props.content)
+
   if (props.content.photo !== undefined) {
     return (
       <MDBMedia className="media-column">

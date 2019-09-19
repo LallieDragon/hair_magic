@@ -1,10 +1,9 @@
 import React from 'react';
 import { MDBCol, MDBRow } from 'mdbreact';
 import { initClient } from '../contentfulClient';
-
 import { social, location } from '../contentful/Keys';
-
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
+import Spinner from '../components/Spinner';
 import SocialMedia from '../components/SocialMedia';
 
 class ContactContainer extends React.Component {
@@ -38,13 +37,14 @@ class ContactContainer extends React.Component {
      }))
     .catch('Error: ' + console.error)
   }
+
   render() {
     if (this.state.socialContent === null) {
       this.getSocialContent(social)
-      return <div>Loading</div>
+      return <Spinner />
     } else if (this.state.locationContent === null){
       this.getLocationContent(location)
-      return <div>Loading</div>
+      return <Spinner />
     }
 
     // <MDBCol md="6">

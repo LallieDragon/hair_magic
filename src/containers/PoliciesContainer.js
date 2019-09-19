@@ -3,6 +3,7 @@ import { MDBContainer } from 'mdbreact';
 import { initClient } from '../contentfulClient';
 import { policies } from '../contentful/Keys';
 import InfoSection from '../components/InfoSection';
+import Spinner from '../components/Spinner';
 
 class PoliciesContainer extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class PoliciesContainer extends React.Component {
   render() {
     if (this.state.policiesContent === null) {
       this.getPoliciesContent(policies);
-      return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
+      return <Spinner />
     }
 
     return(

@@ -8,7 +8,7 @@ const PriceList = (props) => {
 
   for(let i = 0; i < Object.keys(props.content.json).length; i++) {
     content.push(
-    <MDBRow className="pricing">
+    <MDBRow className="pricing" key={props.content.json[i].title}>
       <MDBCol md="4" className="info">{props.content.json[i].title}</MDBCol>
       <MDBCol md="5" className="info">{props.content.json[i].price}</MDBCol>
     </MDBRow>

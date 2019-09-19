@@ -9,6 +9,11 @@
   margin: none;
 }
 
+.media-object {
+  margin-right: 1rem;
+  margin-left: 3rem;
+}
+
 .text {
   text-align: left;
 }

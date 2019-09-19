@@ -2,7 +2,6 @@ import React from 'react';
 import { MDBCol, MDBRow, MDBBtn, MDBIcon } from 'mdbreact';
 
 const SocialMedia = (props) => {
-    console.log(props)
     return(
       <MDBCol>
         <p className="h4 text-center mb-4">Hours based on appointment only.</p>
@@ -19,12 +18,9 @@ const SocialMedia = (props) => {
           </a>
         </MDBRow>
         <MDBCol>
-          <p className="h4 text-center mt-4">Location</p>
-          <p className="h5 text-center">Hair Magic</p>
-          <p className="h5 text-center">15950 Ranch Road 12,</p>
-          <p className="h5 text-center">Ste. 1</p>
+          <p className="h4 text-center mt-4">Location:</p>
+          <p className="h5 text-center">15950 Ranch Road 12 Ste. 1,</p>
           <p className="h5 text-center">Wimberley, TX 78676</p>
-
         </MDBCol>
       </MDBCol>
     )

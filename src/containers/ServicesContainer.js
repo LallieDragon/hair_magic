@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBContainer } from 'mdbreact';
 import { initClient } from '../contentfulClient';
-
+import Spinner from '../components/Spinner';
 import InfoSection from '../components/InfoSection';
 import PriceList from '../components/PriceList';
 import { cuts, color, additionalTreatments, treatments, disclaimer } from '../contentful/Keys';
@@ -68,19 +68,19 @@ class ServicesContainer extends React.Component {
   render() {
     if (this.state.cutsContent === null) {
       this.getCutsContent(cuts);
-      return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
+      return <Spinner />
     } else if (this.state.colorContent === null) {
       this.getColorContent(color);
-      return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
+      return <Spinner />
     } else if (this.state.treatmentsContent === null) {
       this.getTreatmentsContent(treatments);
-      return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
+      return <Spinner />
     } else if (this.state.additionalContent === null) {
       this.getAdditionalContent(additionalTreatments);
-      return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
+      return <Spinner />
     } else if (this.state.disclaimerContent === null) {
       this.getDisclaimerContent(disclaimer);
-      return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
+      return <Spinner />
     }else {
       return(
         <MDBContainer>

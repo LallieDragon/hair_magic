@@ -2,7 +2,7 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import Lightbox from "react-image-lightbox";
 import { initClient } from '../contentfulClient';
-
+import Spinner from '../components/Spinner';
 import imageQuality from '../imageHandling';
 import { portfolio } from '../contentful/Keys';
 import "../styles/Portfolio.css";
@@ -28,8 +28,6 @@ renderImages = () => {
   let photoIndex = -1;
 
   if (this.state.images !== null && this.state.images !== undefined) {
-    console.log(this.state.images)
-
     return this.state.images.map(imageSrc => {
       photoIndex++;
       const privateKey = photoIndex;
@@ -47,6 +45,7 @@ renderImages = () => {
     )
   } else {
     this.getMedia(portfolio)
+    return <Spinner />
   }
 }
 

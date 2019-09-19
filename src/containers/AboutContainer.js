@@ -1,10 +1,8 @@
 import React from 'react';
-import { MDBContainer } from 'mdbreact';
 import { initClient } from '../contentfulClient';
-
 import { about } from '../contentful/Keys.json'
-
 import InfoSection from '../components/InfoSection';
+import Spinner from '../components/Spinner';
 
 class AboutContainer extends React.Component {
   constructor(props) {
@@ -28,10 +26,9 @@ class AboutContainer extends React.Component {
   render() {
     if (this.state.content === null) {
       this.getContent(about);
-      return <MDBContainer style={{height: "100%"}}>Loading</MDBContainer>
+      return <Spinner />
     }
 
-    console.log(this.state)
     return(
       <div style={{ position: "center", marginTop: "3rem"}}>
         <InfoSection content={this.state.content} />

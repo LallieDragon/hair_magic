@@ -3,8 +3,8 @@ import { initClient } from '../contentfulClient';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse } from "mdbreact";
 import { tabs } from '../contentful/Keys.json';
 import logo from '../files/logo.png';
-
-import '../styles/navbar.css';
+import Spinner from '../components/Spinner';
+import '../styles/Navbar.css';
 
 class NavbarContainer extends React.Component {
   constructor(props) {
@@ -16,7 +16,6 @@ class NavbarContainer extends React.Component {
     this.getContent = this.getContent.bind(this);
     this.toggleCollapse = this.toggleCollapse.bind(this);
   }
-
 
   toggleCollapse = () => {
     const currentlyOpen = this.state.isOpen;
@@ -36,7 +35,7 @@ class NavbarContainer extends React.Component {
   render() {
     if (this.state.navbarContent === null) {
       this.getContent(tabs);
-      return <div>Loading</div>
+      return <Spinner />
     } else {
       let links = this.state.navbarContent.tabs;
 
