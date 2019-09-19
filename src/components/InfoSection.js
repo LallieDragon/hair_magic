@@ -12,7 +12,7 @@ const InfoSection = (props) => {
         <MDBMedia className="mr-3 picture">
           <MDBMedia object src={imageQuality(props.content.photo.fields.file.url, 20)} alt="store-front" />
         </MDBMedia>
-        <MDBMedia body>
+        <MDBMedia body id="info-body">
           <MDBMedia heading className="content-title">{props.content.title}</MDBMedia>
           <p className="text">{props.content.body}</p>
           <p className="text">{props.content.additional || ""}</p>
