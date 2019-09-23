@@ -15,7 +15,7 @@ const FormPage = (props) => {
             <br />
 
             <label htmlFor="email">Email</label>
-            <input type="email" name="email" className="form-control" />
+            <input type="email" name="replyto" className="form-control" />
 
             <br />
 
@@ -25,7 +25,7 @@ const FormPage = (props) => {
             <br />
 
             <label htmlFor="message">Message</label>
-            <textarea type="text" message="message" className="form-control" rows="3" />
+            <textarea type="text" name="message" id="message" className="form-control" rows="3" required="" />
 
             <div className="text-center mt-4">
               <MDBBtn style={{ marginBottom: "2rem" }} color="cyan lighten-3" outline type="submit" value="Send">
